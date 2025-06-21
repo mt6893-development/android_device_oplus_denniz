@@ -3,6 +3,6 @@
 
     <application android:hasCode="false" />
     <overlay android:targetPackage="com.android.providers.settings"
-             android:isStatic="true"
-             android:priority="50"/>
+                   android:isStatic="true"
+                   android:priority="50"/>
 </manifest>

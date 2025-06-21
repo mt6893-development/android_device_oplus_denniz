@@ -1,8 +1,0 @@
-[
-  {
-    "repository": "oplus-ossi-development/proprietary_vendor_oplus_denniz",
-    "target_path": "vendor/oplus/denniz",
-    "branch": "lineage-21",
-    "remote": "github"
-  }
-]

@@ -19,21 +19,14 @@ DEVICE_PATH := device/oplus/denniz
 # Inherit from oplus mt6893-common
 include device/oplus/mt6893-common/BoardConfigCommon.mk
 
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U
+
 # Assertation
 TARGET_OTA_ASSERT_DEVICE := denniz,OP515BL1
 
 # Kernel
 TARGET_KERNEL_CONFIG := cupida_defconfig
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
-
-# Modules
-BOARD_VENDOR_KERNEL_MODULES_LOAD := \
-    lcd.ko \
-    tcp_westwood.ko
-
-# Init
-TARGET_INIT_VENDOR_LIB ?= //$(DEVICE_PATH):init_denniz
-TARGET_RECOVERY_DEVICE_MODULES ?= init_denniz
 
 # Vibrator
 TARGET_VIBRATOR_ALT_SEQ_TYPE := true

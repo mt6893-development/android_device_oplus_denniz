@@ -19,13 +19,13 @@ DEVICE_PATH := device/oplus/denniz
 # Inherit from ossi device
 $(call inherit-product, device/oplus/mt6893-common/common.mk)
 
+# Inherit several Android Go Configurations (Beneficial for everyone, even on non-Go devices)
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-image-profile.txt
+
 # Alert slider
 PRODUCT_PACKAGES += \
     alert-slider_daemon
-
-# MTK InCallService
-PRODUCT_PACKAGES += \
-    MtkInCallService
 
 # Overlays
 PRODUCT_PACKAGES += \
